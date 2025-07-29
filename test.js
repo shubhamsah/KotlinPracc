@@ -14,7 +14,7 @@ function isUserAdmin(user) {
   if (user && user.role === 'admin') {
     return true;
   }
-  return;
+  return false;
 }
 
 const result = isUserAdmin({ name: 'Alice', role: 'user' });
