@@ -3,7 +3,6 @@ function badFunction() {
     let x = 10;
 if (x === 5)
         console.log("This is wrong");
-    }
     // Missing return statement
 }
 
