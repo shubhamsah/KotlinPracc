@@ -31,7 +31,7 @@ class UserController(
     @GetMapping
     fun getAllUsers(
         @RequestHeader("Authorization") token: String
-    ): ResponseEntity<List<User>> {
+        // Consider using a dedicated exception handler or AOP for consistent access control.
         return if (authUtil.isAdmin(token)) {
             ResponseEntity.ok(userRepository.findAll())
         } else {
