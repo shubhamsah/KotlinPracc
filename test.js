@@ -9,3 +9,15 @@ function badFunction() {
 
 // Unused variable
 let unusedVar = "hello";
+
+function isUserAdmin(user) {
+  if (user && user.role === 'admin') {
+    return true;
+  }
+  return;
+}
+
+const result = isUserAdmin({ name: 'Alice', role: 'user' });
+if (result) {
+  console.log('Admin access granted');
+}
