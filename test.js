@@ -1,16 +1,17 @@
 // test-file.js
 function badFunction() {
-    var x = 10;  // Should use const/let
-    if (x = 5) { // Assignment instead of comparison
+    let x = 10;
+if (x === 5)
         console.log("This is wrong");
     }
     // Missing return statement
 }
 
-// Unused variable
 let unusedVar = "hello";
 
 function isUserAdmin(user) {
+  return user && user.role === 'admin';
+}
   if (user && user.role === 'admin') {
     return true;
   }
