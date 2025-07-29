@@ -9,7 +9,7 @@ class AuthUtil {
 
     private val secretKey = "mysecret" // Load from config in prod
 
-    fun extractUsername(token: String): String? {
+    private val secretKey: String = System.getenv("JWT_SECRET_KEY") ?: throw IllegalStateException("JWT_SECRET_KEY not configured")
         return extractClaims(token)?.subject
     }
 
